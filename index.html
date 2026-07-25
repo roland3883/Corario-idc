@@ -370,16 +370,19 @@
 <footer style="text-align: left; padding: 10px 0; margin-top: 10px;">
   <!-- Un solo botón con ID "menu-info-btn" que coincide con JS -->
   <font size="1">
-  <button id="menu-info-btn" class="about-link" title="Acerca de"><i>By: RolandArtt | Versión 1.1</i></button>
+  <button id="menu-info-btn" class="about-link" title="Acerca de">Versión 1.0 | Descarga desde Google Play | Añadir para iOs</button>
   </font>
   
   <div id="about-overlay">
     <div id="about-box">
       <button id="about-close" title="Cerrar">&times;</button>
-	  <img src="minilog.jpg" width="150">
-      <p><font size="2"><a href="https://www.corario-idc.com" target="_blank">www.corario-idc.com</a></font></p><br>
-	  <p><i>Versión 1.1</i></p>
-      <p><font size="1">Designed by: @RolandArtt <br> Roland Artero © 2026</font></p>
+	  <img src="https://i.postimg.cc/VkHtJCy1/logo-corario.jpg" width="150">
+      <p><font size="2">-Web Version-</font></p>
+	  <p>V. 1.0</p>
+      <p><font size="1">Designed by: @RolandArtt <br> Roland Artero © 2026</font></p><br><br>
+	  <a href="" class="about-link" style="text-decoration:none"><img src="https://zimbronapps.com/wp-content/uploads/2018/10/googleplay_latam_store.png" width="150"></a>
+	  <br><br>
+	  <button onclick="instalarIOS()">📱 Instalar en iPhone</button>
     </div>
   </div>
 </footer>
@@ -557,6 +560,23 @@ handleHash();
     }
   });
   
+  //instalar iPhone instrucciones
+  function instalarIOS() {
+
+    const esIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+    if (!esIOS) {
+        alert("Esta opción es solo para dispositivos iPhone o iPad.");
+        return;
+    }
+
+    alert(
+        "Para instalar Corario:\n\n" +
+        "1. Presiona el botón Compartir (□↑).\n" +
+        "2. Selecciona 'Añadir a pantalla de inicio'.\n" +
+        "3. Presiona 'Añadir'."
+    );
+}
   
 </script>
 </body>
