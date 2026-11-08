@@ -347,6 +347,21 @@
   #about-close:hover {
     color: var(--ink);
   }
+  .header{
+    position: relative;
+    background: #1976d2;
+    color: white;
+    padding: 20px;
+}
+
+.logo-header{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+}
 </style>
 </head>
 <body>
@@ -354,6 +369,7 @@
 <header>
   <h1>Corario Juvenil</h1>
   <p><font size="4">• Iglesia de Cristo •</font></p>
+  <!--<button id="menu-info-btn" class="about-link" title="Acerca de"><img src="install.png" class="logo-header"></button>-->
 </header>
 
 <div class="search-wrap">
@@ -387,19 +403,16 @@
 
 <footer style="text-align: left; padding: 10px 0; margin-top: 10px;">
   <font size="1">
-  <button id="menu-info-btn" class="about-link" title="Acerca de">Versión 1.0.1 | Descarga el APK desde aqui </button>
+  <button id="menu-info-btn" class="about-link" title="Acerca de">Acerca de Corario App</button>>
   </font>
   
   <div id="about-overlay">
-    <div id="about-box">
+     <div id="about-box">
       <button id="about-close" title="Cerrar">&times;</button>
 	  <img src="https://i.postimg.cc/VkHtJCy1/logo-corario.jpg" width="150">
-      <p><font size="2">Web Version 1.0.1</font></p>
-      <p><font size="1">Designed by: @RolandArtt <br> Roland Artero © 2026</font></p><br>
-	  <!--<a href="" class="about-link" style="text-decoration:none"><img src="https://zimbronapps.com/wp-content/uploads/2018/10/googleplay_latam_store.png" width="150"></a>-->
-	  <a href="corario-app.apk" class="about-link" style="text-decoration:none"><img src="dowload-apk.png" width="150"></a>
-	  <br><br>
-	  <button onClick="instalarIOS()">📱 Instalar en dispositios iOs</button>
+      <p><font size="2">Versión 1.0.1</font></p>
+      <p><font size="1">Designed by: @RolandArtt © 2026</font></p>
+	  <a href="https://corario-idc.com" class="about-link" style="text-decoration:none" target="_blank">&#128073; www.corario-idc.com.</a>
     </div>
   </div>
 </footer>
@@ -425,7 +438,10 @@ const SONGS = [{"num": 1, "title": "Grande es el Señor", "html": "Grande es el 
 {"num": 217, "title": "Cantad al Señor un cántico nuevo", "html": "<p>///  Cantad al Se&ntilde;or, Un  c&aacute;ntico nuevo. ///<br />Cantad  al Se&ntilde;or, cantad al Se&ntilde;or.</p><p>/// &iquest;Y  que hizo &Eacute;l?, Hizo  maravillas. ///<br />Cantad  al Se&ntilde;or, cantad al Se&ntilde;or.</p><p>/// Él  vive en m&iacute;, Él no  est&aacute; muerto. ///<br />Cantad  al Se&ntilde;or, cantad al Se&ntilde;or.</p>"},
 {"num": 218, "title": "Quién como El Señor", "html": "<p>//Qui&eacute;n como el Se&ntilde;or, No  hay nadie<br /> Qui&eacute;n como el Se&ntilde;or, Poderoso y fuerte<br />Qui&eacute;n como el Se&ntilde;or, Él  es digno<br />Vamos  alab&eacute;mosle //</p><p>Gloria a Dios, Gloria a Dios.</p><p>Digno eres T&uacute; de gloria<br />Desde  el amanecer hasta el atardecer<br />Exaltemos el nombre del Rey.</p><p>///  Todos unidos d&eacute;mosle gloria ///<br />Digno es el Dios de Israel...</p><p>Qui&eacute;n como Él Se&ntilde;or.</p>"},
 {"num": 219, "title": "A tí y a mí", "html": "<p>&iexcl;Cu&aacute;n tiernamente nos est&aacute; llamando<br />Cristo a ti y a m&iacute;!<br />&Eacute;l nos espera con brazos abiertos<br />Llama a ti y a m&iacute;.</p><p><em>Coro:</em><br />Venid, venid<br /> Si est&aacute;is cansados venid<br />&iexcl;Cu&aacute;n tiernamente os est&aacute; llamando!<br />&iexcl;Oh pecadores, venid!</p><p>&iquest;Por qu&eacute; tememos si est&aacute; abogando,<br />Cristo por ti y por m&iacute;?<br />Sus bendiciones est&aacute; derramando,<br />Siempre por ti y por m&iacute;.<br /><br><em>Coro</em></p><p> El tiempo vuela, lograrlo conviene<br />Cristo te llama a ti.<br />Vienen las sombras y la muerte viene;<br />Viene por ti y por m&iacute;.<br /><br><em>Coro</em></p>"},
-{"num": 220, "title": "Solamente en Cristo", "html": "<p>Solamente en Cristo (Solamente en Cristo)<br />Solamente en El (Solamente en El) <br />La salvaci&oacute;n (La salvaci&oacute;n)<br />Se encuentra en El. (Se encuentra en El) </p><p>No hay otro nombre (No, no lo hay, no lo hay) <br />Dado a los hombres, (No, no lo hay, no lo hay) <br />Solamente en Cristo, (Solamente en Cristo) <br />Solamente en El. (Si gloria a Dios) </p><p>Hay que regalo precioso Cristo me dio,<br />Lleno mi alma de gozo y me salvo (me salvo)<br />Y ahora puedo cantar, en altavoz<br />Y puedo testificar que El me salv&oacute;.</p><p><em>-Repite 1ra y 2da estrofa-</em></p>"}];
+{"num": 220, "title": "Solamente en Cristo", "html": "<p>Solamente en Cristo (Solamente en Cristo)<br />Solamente en El (Solamente en El) <br />La salvaci&oacute;n (La salvaci&oacute;n)<br />Se encuentra en El. (Se encuentra en El) </p><p>No hay otro nombre (No, no lo hay, no lo hay) <br />Dado a los hombres, (No, no lo hay, no lo hay) <br />Solamente en Cristo, (Solamente en Cristo) <br />Solamente en El. (Si gloria a Dios) </p><p>Hay que regalo precioso Cristo me dio,<br />Lleno mi alma de gozo y me salvo (me salvo)<br />Y ahora puedo cantar, en altavoz<br />Y puedo testificar que El me salv&oacute;.</p><p><em>-Repite 1ra y 2da estrofa-</em></p>"},
+{"num": 221, "title": "A Ti y a Mi", "html": "<p>&iexcl;Cu&aacute;n tiernamente nos est&aacute; llamando<br />Cristo a ti y a m&iacute;!<br />&Eacute;l nos espera con brazos abiertos:<br />Llama a ti y a m&iacute;.</p><p>CORO<br />  Venid, venid, si est&aacute;is cansados, venid<br />  &iexcl;Cu&aacute;n tiernamente os est&aacute; llamando!<br />  &iexcl;Oh pecadores, venid!</p><p>&iquest;Por qu&eacute; tememos si est&aacute; abogando<br />  Cristo por ti y por m&iacute;?<br />  Sus bendiciones est&aacute; derramando<br />  Siempre por ti y por m&iacute;.</p><p>El tiempo vuela, lograrlo conviene;<br />  Cristo te llama a ti.<br />  Vienen las sombras y la muerte viene:<br />  Viene por ti y viene por m&iacute;.</p>"},
+{"num": 222, "title": "A Ti Señor.", "html": "<p>A Ti Se&ntilde;or,//<br />  levanto mi alma.//<br />  Oh mi Dios, conf&iacute;o en ti.//<br />  Que no tenga yo verg&uuml;enza<br />ni mis enemigos triunfen sobre m&iacute;.</p><p>No te acuerdes//<br />  de mis pecados.//<br />  Oh mi Dios, conf&iacute;o en ti.//<br />  Que no tenga yo verg&uuml;enza<br />  ni mis enemigos triunfen sobre m&iacute;.</p><p>Prot&eacute;geme,//<br />  pues en ti conf&iacute;o.//<br />  Oh mi Dios, conf&iacute;o en ti.//<br />  Que no tenga yo verg&uuml;enza<br />  ni mis enemigos triunfen sobre m&iacute;.</p>"},
+{"num": 223, "title": "Ven a  platicar con Cristo (Perdido andaba yo)", "html": "<p>Perdido andaba yo<br />  M&aacute;s Cristo me encontr&oacute;<br />  Un rayo de celeste luz mi alma alumbro,<br />  mi nombre escrito est&aacute; en la mansi&oacute;n de luz<br />  Mas solo porque hable con Cristo salvo soy</p><p>Coro:<br />  Ahora, ven a platicar con Cristo<br />  Dile, todo lo que te entristece<br />  Oye, oye tu oraci&oacute;n<br />  Contesta, si contestar&aacute;<br />  M&aacute;s cuando, sientas que &eacute;l oy&oacute; tus ruegos<br />  Y t&uacute;, sientas del amor el fuego<br />  Dile al mundo que el hablar con Cristo es la raz&oacute;n.</p><p>A veces triste estoy y caminando voy,<br />  en medio de la densa nube del dudar.<br />  La neblina del mar me oculta del fanal,<br />  m&aacute;s solo por que hable con Cristo luz habr&aacute;</p><p>-coro</p><p>Ni dudas ni temor podranme atormentar,<br />  Cristo es Amigo fiel me cuidar&aacute;,<br />  El oye mi oraci&oacute;n conoce mi aflicci&oacute;n,<br />  M&aacute;s s&oacute;lo porque habl&eacute; con El me sostendr&aacute;</p><p>-coro</p>"}];
 
 
 const indexList = document.getElementById('index-list');
